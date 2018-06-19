@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+</head>
+<style type="text/css">
+    div{
+        text-align: center;
+        margin-top: 80px;
+    }
+    #clock{
+        border: 1px  #cccccc;
+    }
+    body{
+        background-image: url("./imgs/background.jpg");
+        background-repeat: no-repeat;
+    }
+</style>
+
+
+
+<body>
+<div>
+    <div style="padding: 50px 50px;color: white;">
+	<p><a href="../project2/login.html">查看下一个项目</a></p>
+    <span>北京时间：</span>
+    <span id="time"></span>
+    </div>
+    <canvas id="clock" width="200ox" height="200px"></canvas>
+</div>
+<script type="text/javascript" src="./showTime.js"></script>
+<script type="text/javascript" src="./clock.js"></script>
+</body>
+</html>

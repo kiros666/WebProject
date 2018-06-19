@@ -1,0 +1,22 @@
+.header{width:100%;height: 77px;background-color:#1D7AD9;text-align: center;}
+.logo_text{font-size: 22px;color: white;line-height: 77px;}
+.loginBox{width:462px;height: 380px;border: cadetblue 1px solid;margin: 7px auto;}
+.formBox{margin: 22px 50px;}
+.formBox form{font-size: 13px;}
+.userName{width:100%}
+.password{width:100%}
+.message_link li{float:left;list-style: none;margin-left: 5px; line-height: 5px;}
+.message_link ul{}
+.message_link a{text-decoration: none; font-size:12px; }
+.message span{font-size: 13px;padding-left: 50px;}
+.check{margin:24px 0px;}
+.check a{text-decoration: none;}
+.login_btn{width:362px;height: 38px;font-size: 14px;}
+.userName{height:36px;}
+.password{height:36px;}
+.footer{width: 100%;height: 100%;text-align: center;}
+.regist_btnf{font-size: 12px;text-decoration: none;width:114px;height:32px;display: block;background-color: #7CBE56;line-height:32px;color:white;margin: 0 auto;}
+.regist_height{height:25px;}
+.formBox_regist{margin: 22px 50px;}
+.formBox_regist span{margin:5px o;font-size: 13px;}
+.registBox{width:462px;height:440px;border: cadetblue 1px solid;margin: 7px auto;}
