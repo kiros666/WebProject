@@ -1,0 +1,24 @@
+/*公用样式*/
+body,ul,ol,li,p,h2,h1,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding: 0}
+body{font-size: 12px;}
+img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;border:none;background: none;}
+textarea{resize:none}
+a{text-decoration: none;color:#656565;}
+/*公用宽度*/
+.comWidth{width:1000px;margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+/*公用隐藏*/
+.hide{display: none}
+.show{display:inline-block;}
+/*清除浮动*/
+.clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
