@@ -7,4 +7,4 @@
 [别踩白块演示地址](http://www.kiros.club/WebProject/别踩白块demo/index.html)  
 [商城demo演示地址](http://www.kiros.club/WebProject/商城demo/login.html)  
 [时钟demo演示地址](http://www.kiros.club/WebProject/时钟demo/index.html)  
-
+[基于jquery商城演示地址](http://www.kiros.club/WebProject/jqueryShop/index.html)
