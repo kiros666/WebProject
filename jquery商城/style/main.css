@@ -1,0 +1,493 @@
+/*
+	作品：jquery 第八章试题练习
+	作者：kiros
+	时间：2018/9/19 20：36
+
+*/
+#header{
+	background: url('../images/headerbg.png') repeat-x scroll 0 0 #ffffff;
+	height: 105px;
+}
+#header .conWidth{
+	position: relative;
+	width: 990px;
+	height: 105px;
+	margin:0 auto;
+	z-index: 100;
+}
+/*头部logo*/
+#header #logo{
+	float: left;
+	margin: 0 0 0 10px;
+	color: #fff;
+	line-height: 80px;
+}
+/*头部搜索*/
+#header .search{
+	position: absolute;
+	left: 198px;
+	top: 20px;
+}
+/*头部换肤*/
+#skin {
+	float: right;
+	margin: 10px;
+	padding: 4px;
+	width: 120px;
+}
+#skin li{
+	float:left;
+	text-indent: 99999px;
+	margin-right: 4px;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+	background-image: url('../images/theme.gif');
+}
+#skin_0{
+	background-position: 0px 0px;
+} 
+#skin_1{
+	background-position: 15px 0px;
+} 
+#skin_2{
+	background-position: 35px 0px;
+} 
+#skin_3{
+	background-position: 55px 0px;
+} 
+#skin_4{
+	background-position: 75x 0px;
+} 
+#skin_5{
+	background-position: 95x 0px;
+} 
+#skin_0.selected{
+	background-position: 0px 15px;
+} 
+#skin_1.selected{
+	background-position: 15px 15px;
+} 
+#skin_2.selected{
+	background-position: 35px 15px;
+} 
+#skin_3.selected{
+	background-position: 55px 15px;
+} 
+#skin_4.selected{
+	background-position: 75px 15px;
+} 
+#skin_5.selected{
+	background-position: 95px 15px;
+}
+ /*头部导航*/
+.mainNav{
+	position: absolute;
+	left: 0;
+	top: 68px;
+	height: 37px;
+	line-height: 37px;
+	width: 990px;
+	z-index: 100;
+	background-color: #4A4A4A;
+}
+.nav{
+	display: inline;
+	float: left;
+	margin-left: 25px;
+}
+.nav ul li{
+	float: left;
+	display: inline;
+	margin-right: 14px;
+	position: relative;
+	z-index: 100;
+}
+.nav ul li a{
+	display: block;
+	padding: 0 8px;
+	font-weight: 700;
+	color: #fff;
+	font-size: 14px;
+}
+/*二级导航*/
+.jnNav{
+	background: #ffffff;
+	border: 1px solid #B1B1B1;
+	border-top: 0;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 37px;
+	width: 474px;
+	z-index: 1000;
+	display: none;
+
+}
+.jnNav .subitem {
+    float: left;
+    height: auto !important;
+    min-height: 100px;
+    padding: 10px 12px;
+    width: 450px;
+}
+.jnNav .subitem dl {
+    border-top: 1px dashed #C4C4C4;
+    overflow: hidden;
+    padding: 8px 0;
+	float:left;
+}
+.jnNav .subitem .fore {
+    border-top-style: none;
+    padding-top: 0;
+}
+.jnNav .subitem dt {
+    float: left;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 4px 3px;
+    text-align: center;
+    width: 76px;
+}
+.jnNav .subitem dt a {
+    color: #000;
+    font-weight: 700;
+	font-size:12px;
+	padding:0;
+}
+.jnNav .subitem dd {
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    width: 364px;
+}
+.jnNav .subitem em {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 14px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+.jnNav .subitem em a {
+    color: #666666;
+    white-space: nowrap;
+	font-size:12px;
+	font-weight:normal;
+	padding:0;
+}
+.jnNav .subitem em.noborder {
+    border-right: 0 none;
+}
+/*内容模块*/
+#content{
+	clear: left;
+	margin: 0 auto;
+	position: relative;
+	width: 990px;
+}
+.janeshop{
+	height: 560px;
+	overflow: hidden;
+	padding:10px 0; 
+}
+/*侧栏导航*/
+#jnCatalog{
+	float: left;
+	height: 560px;
+	margin: 0 11px 0 0;
+	overflow: hidden;
+	width: 187px;
+}
+#jnCatalog h2{
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 12px;
+	text-indent: 13px;
+	background-color: #6E6E6E;
+}
+#jnCatalog .jnCatainfo{
+	border: 1px solid #6E6E6E;
+	border-style: none solid solid;
+	border-width: 0 1px 1px;
+	height: 524px;
+	overflow: hidden;
+	padding:5px 10px 0;
+	width: 165px; 
+}
+#jnCatolog .jnCatainfo h3{
+	border-bottom: 1px solid #EEEEEE;
+	height: 24px;
+	line-height: 24px;
+	width: 164px;
+}
+#jnCatolog .jnCatainfo ul{
+	float: left;
+	padding: 0 2px 8px;
+}
+#jnCatalog .jnCatainfo ul li{
+	color: #AEADAE;
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 79px;
+	overflow: hidden;
+	position: relative;
+}
+#jnCatalog .jnCatainfo ul li a{
+	color:#444444;
+}
+#jnCatalog .jnCatainfo ul li a:hover{
+	color: #008CD7;
+	text-decoration: none;
+}
+#jnCatalog .jnCatainfo ul li a.promoted{
+	color: #F9044E;
+}
+#jnCatalog .jnCatainfo ul li .hot{
+	background: url('../images/hot.gif') no-repeat;
+	height: 16px;
+	width: 21px;
+	position: absolute;
+	top: 0;
+	left: 21px;
+}
+
+/*轮播图*/
+#jnImageroll{
+	float: left;
+	height: 320px;
+	margin: 0 11px 0 0;
+	overflow: hidden;
+	position: relative;
+	width: 550px;
+}
+#jnImageroll img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#jnImageroll div{
+	bottom: 0;
+	overflow: hidden;
+	position: absolute;
+	float: left;
+
+}
+#jnImageroll div a{
+	background-color: #444444;
+	color: #FFFFFF;
+	display: inline-block;
+	float: left;
+	height: 32px;
+	width: 79px;
+	margin-right: 1px;
+	overflow: hidden;
+	padding: 5px 15px;
+	text-align: center; 
+}
+#jnImageroll div a:hover{
+	text-decoration: none;
+}
+#jnImageroll div a em{
+	cursor: pointer;
+	display: block;
+	height: 16px;
+	width: 79px;
+	overflow: hidden;
+}
+#jnImageroll .last{
+	margin: 0;
+	width: 80px;
+}
+#jnImageroll a.chos{
+	background: url(../images/adindex.gif) no-repeat center 39px #37A7D7;
+	color: #FFFFFF;
+}
+/*关注新品*/
+#jnNotice{
+	float: left;
+	height: 321px;
+	overflow: hidden;
+	width: 230px;
+}
+#jnMiaoSha{
+	float: left;
+	height: 176px;
+	width: 230px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+#jnNoticeInfo{
+	float: left;
+	border: 1px solid #DFDFDF;
+	height: 133px;
+	width: 228px;
+	overflow: hidden;
+}
+#jnNoticeInfo h2{
+	height: 23px;
+	line-height: 23px;
+	border-bottom: 1px solid #DFDFDF;
+	text-indent: 12px;
+}
+#jnNoticeInfo ul{
+	float: left;
+	padding: 6px 2px 0 12px;
+}
+#jnNoticeInfo ul li{
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+#jnNoticeInfo ul li a{
+	color: #666666;
+}
+#jnNoticeInfo ul li a:hover{
+	color: #008CD7;
+	text-decoration: none;
+} 
+/*jnNotice 图片动画*/
+.JS_css3 img {
+	-webkit-transition:1s all;
+	-moz-transition:1s all;
+	-o-transition:1s all;
+	transition:1s all;
+}
+.JS_css3:hover img {
+	-webkit-transform:rotate(720deg);
+	-moz-transform:rotate(720deg);
+	-o-transform:rotate(720deg);
+	transform:rotate(720deg);
+}
+/*关注新品链接hover时显示的内容*/
+#tooltip{
+	position: absolute;
+	border: 1px solid #333;
+	background-color: #f7f5d1;
+	padding: 1px;
+	color: #333;
+}
+
+/*品牌活动*/
+#jnBrand{
+	float: left;
+	height: 230px;
+	margin: 10px 0 0;
+	overflow: hidden;
+	width: 790px;
+}
+/*品牌头部*/
+#jnBrandTab{
+	border-bottom: 1px solid #E4E4E4;
+	height: 29px;
+	width: 790px;
+	position: relative;
+	float: left;
+}
+#jnBrandTab h2{
+	height: 29px;
+	width: 100px;
+	line-height: 29px;
+	position: absolute;
+	left: 0;
+}
+#jnBrandTab ul{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#jnBrandTab ul li{
+	float: left;
+	margin: 0 10px 0 0;
+}
+#jnBrandTab ul li a{
+	background-color: #E4E4E4;
+	color: #000000;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+}
+#jnBrandTab .chos{
+	background: url('../images/chos.gif') no-repeat scroll 50% bottom transparent;
+	padding-bottom: 3px;
+}
+#jnBrandTab .chos a{
+	background-color: #FA5889;
+	color: #FFFFFF;
+	/*outline: 0 none; */
+}
+
+/*品牌内容*/
+#jnBrandContent {
+	float: left;
+	height: 188px;
+	overflow: hidden;
+	margin: 8px 5px;
+	width: 790px;
+	position: relative;
+}
+#jnBrandList {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 3200px;
+}
+#jnBrandList li {
+	float: left;
+	height: 188px;
+	width: 185px;
+	overflow: hidden;
+	position: relative;
+	padding: 0 5px;
+}
+#jnBrandList li img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#jnBrandList li span {
+	background-color: #EFEFEF;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	display: block;
+	width: 183px;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	font-size: 14px;
+	text-align: center;
+}
+#jnBrandList li a{
+	color: #666666;
+}
+#jnBrandList li a:hover{
+	color: #008CD7;
+	text-decoration: none;
+}
+/*鼠标滑过图片样式*/
+.imageMask{
+	background-color:#ffffff; 
+	filter:alpha(opacity=0);
+	opacity: 0;	
+	cursor: pointer;
+}
+.imageOver{
+	background: url('../images/zoom.gif') no-repeat 50% 50%;
+	filter: alpha(opacity=60);
+	/*css3的滤镜效果
+	1. Alpha：设置透明度
+Alpha(Opacity=?, FinishOpacity=?, Style=?, StartX=?, StartY=?, FinishX=?, FinishY=?)
+Opacity：透明度级别，范围是0-100，0代表完全透明，100代表完全不透明。
+FinishOpacity：设置渐变的透明效果时，用来指定结束时的透明度，范围也是0 到 100。
+Style：设置渐变透明的样式，值为0代表统一形状、1代表线形、2代表放射状、3代表长方形。
+StartX和StartY：代表渐变透明效果的开始X和Y坐标。
+FinishX和FinishY：代表渐变透明效果结束X和Y 的坐标。*/
+	opacity: 0.6;
+}
