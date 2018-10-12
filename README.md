@@ -7,4 +7,4 @@
 [html+css商城](http://www.kiros.club/WebProject/shop/login.html)  
 [时钟demo](http://www.kiros.club/WebProject/clock/index.html)  
 [基于jquery商城](http://www.kiros.club/WebProject/jqueryShop/index.html)
-[css3动画旋转的地球](http://www.kiros.club/WebProject/ratatingEarth/index.html)
+[css3动画旋转的地球](http://www.kiros.club/WebProject/ratativeEarth/index.html)
