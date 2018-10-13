@@ -11,3 +11,6 @@
 </br>
 </br>
 :dog:
+:school:
+:heartbeat:
+:milky_way:
