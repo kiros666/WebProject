@@ -3,7 +3,14 @@
 
 ---------
 ### demo演示地址
-[别踩白块演示地址](http://www.kiros.club/WebProject/whiteBlockGame/index.html)  
-[商城demo演示地址](http://www.kiros.club/WebProject/shop/login.html)  
-[时钟demo演示地址](http://www.kiros.club/WebProject/clock/index.html)  
-[基于jquery商城演示地址](http://www.kiros.club/WebProject/jqueryShop/index.html)
+[别踩白块游戏](http://www.kiros.club/WebProject/whiteBlockGame/index.html)  
+[html+css商城](http://www.kiros.club/WebProject/shop/login.html)  
+[Canvas时钟](http://www.kiros.club/WebProject/clock/index.html)  
+[基于jquery商城](http://www.kiros.club/WebProject/jqueryShop/index.html)</br>
+[css3动画旋转的地球](http://www.kiros.club/WebProject/rotativeEarth/index.html)
+</br>
+</br>
+:dog:
+:school:
+:heartbeat:
+:milky_way:
