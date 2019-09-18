@@ -1,0 +1,147 @@
+﻿<html>
+<head>
+    <title>Fastgame Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+     table.dataintable {
+        margin-top:10px;
+        border-collapse:collapse;
+        border:1px solid #aaa;
+        width:100%;
+	 }
+	table.dataintable th {
+        vertical-align:baseline;
+        padding:5px 15px 5px 6px;
+        background-color:#d5d5d5;
+        border:1px solid #aaa;
+        text-align:left;
+	}
+    table.dataintable td {
+        vertical-align:text-top;
+        padding:6px 15px 6px 6px;
+        background-color:#efefef;
+        border:1px solid #aaa;
+        }
+    </style>
+
+    <script language="javascript">
+
+	 var success = -1;
+
+    function setResult(str) {
+    	document.getElementById("result").innerHTML= str
+	}
+	function setResultnew(str) {
+    	document.getElementById("resultnew").innerHTML= str
+	}
+	//登录调用
+	function GamesignIn(){
+
+		var params = {"appid":"100435117","forceLogin":"1"}
+	 HwFastappObject.gameLogin(JSON.stringify(params));
+	}
+
+	HwFastappObject.onGameLoginResult = function onGameLoginResult(str){
+		//登录成功记录标志，且显示游戏浮标
+		success = 0;
+		showFloatWindow();
+		document.getElementById("resultnew").innerHTML= str.code;
+		document.getElementById("result").innerHTML= str.data;
+		
+	}
+
+//保存用户信息至华为服务器，用于进行联运相关活动
+	function savePlayerInfo(){
+		var params = {"appid":"100435117","area":"cn","rank":"1","role":"fashi"}
+	 HwFastappObject.savePlayerInfo(JSON.stringify(params));
+	}
+
+	HwFastappObject.onSavePlayerInfoResult = function onSavePlayerInfoResult(str){
+		document.getElementById("resultsave").innerHTML= str.code;
+	}
+
+
+	function showFloatWindow(){
+		var params = {"appid":"100435117"}
+				HwFastappObject.showFloatWindow(JSON.stringify(params));
+	}
+
+	function hideFloatWindow(){
+		var params = {"appid":"100435117"}
+				HwFastappObject.hideFloatWindow(JSON.stringify(params));
+	}
+
+//浮标处理，此处每个页面都需要接受显示和隐藏浮标消息，特别注意有重定向的页面，否则可能导致浮标无法隐藏被驳回
+//发送消息在ux的onshow和onhide的方法中调用，具体可以参考demo中的ux文件
+	system.onmessage = function(data) {
+                 if (data == "showfloatwindow") {
+                 if (success == 0) {
+                    showFloatWindow();
+                    }
+                 }
+                 if (data == "hidefloatwindow") {
+                 hideFloatWindow();
+                 }
+             }
+
+//支付接口调用流程说明
+	function pay(){
+		/* 接口调用
+		var param1 = {
+        "amount":prd.price,    //商品金额
+        "applicationID":"100389777",    //应用ID，在华为开发者联盟上获取的APP ID
+         "productDesc":prd.name,    //商品描述，该字段中不能包含特殊字符，包括# " & / ? $ ^ *:) \ < > , | % + 
+        "productName":prd.name,    //商品名称，该字段中不能包含特殊字符，包括# " & / ? $ ^ *:) \ < > , | % + 
+        "requestId":params.requestId,    //在支付前生成，用于唯一标识一次支付请求。支付平台在服务器回调接口中会原样返回requestId的值。该字段由字母和数字组成，必须在商户内唯一，用于唯一标识一个商户订单。 
+        "serviceCatalog":"X6",    //游戏设置为"X6" 
+        "merchantId":"10086000000000293",    //华为开发者联盟上申请支付服务获取的“支付ID”
+        "merchantName":"华为众测",    //商户名称，开发者注册的公司名
+        "sign":params.sign,    //签名，签名算法务必使用sha256算法。签名方式请参见“orderinfo参数说明”，
+		示例代码请参见“签名校验示例代码”,网站地址https://developer.huawei.com/consumer/cn/service/hms/catalog/HuaweiJointOperation.html?page=hmssdk_jointOper_payment_sample_code    
+		请尽可能使用示例代码源码来进行签名操作，减少因为签名方法不一致导致的调试不通，多谢  
+        "urlver":"2",    //固定值为2
+         "sdkChannel":3,    //游戏设置为3  
+         "publicKey": "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIL/7zgG9KCjm5IeGFzq8oVaxCqFJ9+m/3rGMXU2p9K+bHLPR1m3c9TMZRGjkZbTZ0G/VLPO6BxiP+w+VM+Z3fECAwEAAQ=="    //必须传入，但不参与签名，华为开发者联盟上申请支付服务获取的“支付公钥”
+}
+var param2 = {"orderInfo":JSON.stringify(param1)}
+         HwFastappObject.pay(JSON.stringify(param2));
+         HwFastappObject.onPayResult = function onPayResult(str){
+                 alert("支付结果: "+str.code+",message: "+str.data);
+         }
+		*/
+	}
+
+
+	
+
+</script>
+
+</head>
+<body>
+<p>
+    Fastgame demo
+</p>
+<p>
+    Result: <br/> <span id="result" style="height:50px;">(unknown)</span>
+</p>
+<p>
+    Resultnew: <br/> <span id="resultnew" style="height:50px;">(unknown)</span>
+</p>
+<p>
+    Resultsave: <br/> <span id="resultsave" style="height:50px;">(unknown)</span>
+</p>
+
+<hr style="height:3px;border:none;border-top:3px double red;" />
+<p><button onClick="GamesignIn()">登陆授权</button></p>
+<hr style="height:3px;border:none;border-top:3px double red;" />
+
+<p><button onClick="savePlayerInfo()">保存用户信息</button></p>
+<hr style="height:3px;border:none;border-top:3px double red;" />
+
+<p><button onClick="pay()">支付</button></p>
+<hr style="height:3px;border:none;border-top:3px double red;" />
+
+
+</body>
+</html>
